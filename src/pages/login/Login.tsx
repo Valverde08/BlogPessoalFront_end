@@ -1,6 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthCOntext";
-import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
+import {
+  useContext,
+  useEffect,
+  useState,
+  type ChangeEvent,
+  type FormEvent,
+} from "react";
 import type UsuarioLogin from "../../models/UsuarioLogin";
 import { ClipLoader } from "react-spinners";
 
@@ -14,7 +20,7 @@ export default function Login() {
   );
 
   useEffect(() => {
-    if (usuario.tokren !== "") {
+    if (usuario.token !== "") {
       navigate("/home");
     }
   }, [usuario]);
@@ -79,7 +85,7 @@ export default function Login() {
           <p>
             ainda não tem uma conta?{""}
             <Link to="/cadastro" className="text-indigo-800 hover:underline">
-              Cadstre-se
+              Cadastre-se
             </Link>
           </p>
         </form>

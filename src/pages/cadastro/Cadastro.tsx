@@ -115,9 +115,9 @@ export default function Cadastro() {
 
             <input
               type="password"
-              id="password"
-              name="password"
-              placeholder="Password"
+              id="senha"
+              name="senha"
+              placeholder="Senha"
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
