@@ -7,7 +7,6 @@ import {
 } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
-
 import type Postagem from "../../../models/Postagem";
 import type Tema from "../../../models/Tema";
 import { AuthContext } from "../../../contexts/AuthCOntext";
